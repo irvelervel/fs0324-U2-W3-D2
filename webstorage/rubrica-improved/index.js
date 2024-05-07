@@ -106,5 +106,7 @@ const contactsFromLocalStorage = JSON.parse(localStorage.getItem('contacts'))
 console.log(contactsFromLocalStorage)
 
 // utilizzare questo contenuto come valore iniziale dell'array contacts, che normalmente parte da [ ]
-contacts = contactsFromLocalStorage // abbiamo anche reso contacts un "let", perchè ora dobbiamo riassegnarne il valore!
+if(contactsFromLocalStorage){
+  contacts = contactsFromLocalStorage // abbiamo anche reso contacts un "let", perchè ora dobbiamo riassegnarne il valore!
+}
 updateContacts() // svuota la riga con le card, cicla l'array contacts (che adesso non parte più da array vuoto) e genera le col
